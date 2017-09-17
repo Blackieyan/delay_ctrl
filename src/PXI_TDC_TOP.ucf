@@ -1,0 +1,195 @@
+ 
+
+NET "fpga_cpld_burst_en" LOC = AD12;
+NET "cpld_fpga_clk" LOC = AE16;
+NET "cpld_fpga_addr[0]" LOC = AH18;
+NET "cpld_fpga_addr[1]" LOC = AG17;
+NET "cpld_fpga_addr[2]" LOC = AG18;
+NET "cpld_fpga_addr[3]" LOC = AK11;
+NET "cpld_fpga_addr[4]" LOC = AK12;
+NET "cpld_fpga_addr[5]" LOC = AJ10;
+NET "cpld_fpga_addr[6]" LOC = AG11;
+NET "cpld_fpga_addr[7]" LOC = AH9;
+#NET "cpld_fpga_addr[8]" LOC = AK9;
+#NET "cpld_fpga_addr[9]" LOC = AG10;
+#NET "cpld_fpga_addr[10]" LOC = AH13;
+#NET "cpld_fpga_addr[11]" LOC = AF11;
+#NET "cpld_fpga_addr[12]" LOC = AE14;
+#NET "cpld_fpga_addr[13]" LOC = AE13;
+#NET "cpld_fpga_addr[14]" LOC = AC14;
+#NET "cpld_fpga_addr[15]" LOC = AC13;
+#NET "cpld_fpga_addr[16]" LOC = AE17;
+#NET "cpld_fpga_addr[17]" LOC = AC17;
+NET "cpld_fpga_sglrd" LOC = AF13;
+NET "cpld_fpga_sglwr" LOC = AP12;
+NET "cpld_fpga_brtrd_req" LOC = AC12;
+NET "fpga_cpld_burst_act" LOC = AD11;
+
+
+
+NET "Inst_CRG/clk_40M_I" LOC = J9;
+NET "Inst_CRG/clk_40M_IB" LOC = H9;
+
+#Created by Constraints Editor (xc6vlx240t-ff1156-2) - 2012/12/25
+NET "clk_40M_I" TNM_NET = "clk_40M_I";
+TIMESPEC TS_clk_40M_I = PERIOD "clk_40M_I" 6.25 ns HIGH 50 %;
+NET "clk_40M_IB" TNM_NET = "clk_40M_IB";
+TIMESPEC TS_clk_40M_IB = PERIOD "clk_40M_IB" 6.25 ns HIGH 50 %;
+#NET "clk_40M_I" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "fpga_cpld_rst_n" LOC = AD15;
+#NET "reset_in_n" LOC = B16;
+NET "cpld_fpga_clk" CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "laser_clk" TNM_NET = "laser_clk";
+TIMESPEC TS_laser_clk = PERIOD "laser_clk" 12.5 ns HIGH 50 %;
+
+############ FPGA CPLD interface ##############
+#Created by Constraints Editor (xc6vlx240t-ff1156-2) - 2013/09/18
+NET "cpld_fpga_clk" TNM_NET = "cpld_fpga_clk";
+TIMESPEC TS_cpld_fpga_clk = PERIOD "cpld_fpga_clk" 33 ns HIGH 50 %;
+#NET "fpga_dac_data[0]" OFFSET = IN 16.5 ns VALID 33 ns BEFORE "cpld_fpga_clk" RISING;
+INST "Inst_cpld_if/cpld_fpga_dio_o_0" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_1" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_2" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_3" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_4" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_5" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_6" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_7" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_8" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_9" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_10" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_11" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_12" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_13" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_14" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_15" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_16" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_17" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_18" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_19" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_20" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_21" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_22" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_23" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_24" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_25" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_26" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_27" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_28" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_29" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_30" IOB =TRUE;
+INST "Inst_cpld_if/cpld_fpga_dio_o_31" IOB =TRUE;
+
+
+
+######
+#NET "SERIAL_OUT_p[0]" LOC = U33;### J23  alice PM pecl
+#NET "SERIAL_OUT_n[0]" LOC = U32;### J24  alice PM necl
+#NET "SERIAL_OUT_p[1]" LOC = U28;### J25  alice AM pecl
+#NET "SERIAL_OUT_n[1]" LOC = V29;### J26  alice AM necl
+#NET "SERIAL_OUT_p[2]" LOC = U31;### J27  alice 500M clk
+#NET "SERIAL_OUT_n[2]" LOC = U30;### J28  alice 500M clk
+
+#NET "apd_fpga_hit_p[0]" LOC = C28;#QLD3_LVDS1+ J9 1
+#NET "apd_fpga_hit_n[0]" LOC = B28;#QLD3_LVDS1- J9 2
+#NET "apd_fpga_hit_p[1]" LOC = C29;#QLD3_LVDS2+ J9 3
+#NET "apd_fpga_hit_n[1]" LOC = D29;#QLD3_LVDS2- J9 4
+#NET "apd_fpga_hit_p[2]" LOC = F33;#QLD4_LVDS1+ J9 5
+#NET "apd_fpga_hit_n[2]" LOC = G33;#QLD4_LVDS1- J9 6
+#NET "apd_fpga_hit_p[3]" LOC = J25;#QLD4_LVDS2+ J9 7
+#NET "apd_fpga_hit_n[3]" LOC = J24;#QLD4_LVDS2- J9 8
+
+
+
+
+		
+
+
+NET "ext_clk_I" LOC = U28;
+NET "ext_clk_IB" LOC = V29;
+
+#J8.1
+NET "trig_out[0]" LOC = L15;
+NET "trig_out[1]" LOC = L14;
+NET "trig_out[2]" LOC = K16;
+NET "trig_out[3]" LOC = L16;
+NET "trig_out[4]" LOC = B20;
+NET "trig_out[5]" LOC = C19;
+NET "trig_out[6]" LOC = F21;
+NET "trig_out[7]" LOC = G20;
+NET "trig_out[8]" LOC = H28;
+NET "trig_out[9]" LOC = H29;
+#J9.1
+NET "trig_out[10]" LOC = C28;
+NET "trig_out[11]" LOC = B28;
+NET "trig_out[12]" LOC = C29;
+NET "trig_out[13]" LOC = D29;
+NET "trig_out[14]" LOC = F33;
+NET "trig_out[15]" LOC = G33;
+NET "trig_out[16]" LOC = J25;
+NET "trig_out[17]" LOC = J24;
+NET "trig_out[18]" LOC = B31;
+NET "trig_out[19]" LOC = A31;
+#J10.1
+NET "trig_out[20]" LOC = N33;
+NET "trig_out[21]" LOC = M33;
+NET "trig_out[22]" LOC = K26;
+NET "trig_out[23]" LOC = K27;
+NET "trig_out[24]" LOC = V34;
+NET "trig_out[25]" LOC = W34;
+NET "trig_out[26]" LOC = N28;
+NET "trig_out[27]" LOC = N29;
+NET "trig_out[28]" LOC = V30;
+NET "trig_out[29]" LOC = W30;
+#J11.1
+NET "trig_out[30]" LOC = L23;
+NET "trig_out[31]" LOC = M22;
+NET "trig_out[32]" LOC = L13;
+NET "trig_out[33]" LOC = M13;
+NET "trig_out[34]" LOC = M12;
+NET "trig_out[35]" LOC = M11;
+NET "trig_out[36]" LOC = U23;
+NET "trig_out[37]" LOC = V23;
+NET "trig_out[38]" LOC = A10;
+NET "trig_out[39]" LOC = B10;
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "laser_clk" LOC = U31; #J27 SMA
+NET "Inst_cpld_if/cpld_fpga_data[0]" LOC = AH15;
+NET "Inst_cpld_if/cpld_fpga_data[1]" LOC = AN17;
+NET "Inst_cpld_if/cpld_fpga_data[2]" LOC = AJ15;
+NET "Inst_cpld_if/cpld_fpga_data[3]" LOC = AP16;
+NET "Inst_cpld_if/cpld_fpga_data[4]" LOC = AM16;
+NET "Inst_cpld_if/cpld_fpga_data[5]" LOC = AP15;
+NET "Inst_cpld_if/cpld_fpga_data[6]" LOC = AM15;
+NET "Inst_cpld_if/cpld_fpga_data[7]" LOC = AN15;
+NET "Inst_cpld_if/cpld_fpga_data[8]" LOC = AK14;
+NET "Inst_cpld_if/cpld_fpga_data[9]" LOC = AP14;
+NET "Inst_cpld_if/cpld_fpga_data[10]" LOC = AN14;
+NET "Inst_cpld_if/cpld_fpga_data[11]" LOC = AL13;
+NET "Inst_cpld_if/cpld_fpga_data[12]" LOC = AM12;
+NET "Inst_cpld_if/cpld_fpga_data[13]" LOC = AN13;
+NET "Inst_cpld_if/cpld_fpga_data[14]" LOC = AN10;
+NET "Inst_cpld_if/cpld_fpga_data[15]" LOC = AN12;
+NET "Inst_cpld_if/cpld_fpga_data[16]" LOC = AK16;
+NET "Inst_cpld_if/cpld_fpga_data[17]" LOC = AM13;
+NET "Inst_cpld_if/cpld_fpga_data[18]" LOC = AJ17;
+NET "Inst_cpld_if/cpld_fpga_data[19]" LOC = AL15;
+NET "Inst_cpld_if/cpld_fpga_data[20]" LOC = AJ14;
+NET "Inst_cpld_if/cpld_fpga_data[21]" LOC = AP17;
+NET "Inst_cpld_if/cpld_fpga_data[22]" LOC = AH14;
+NET "Inst_cpld_if/cpld_fpga_data[23]" LOC = AF15;
+NET "Inst_cpld_if/cpld_fpga_data[24]" LOC = AK18;
+NET "Inst_cpld_if/cpld_fpga_data[25]" LOC = AJ19;
+NET "Inst_cpld_if/cpld_fpga_data[26]" LOC = AF18;
+NET "Inst_cpld_if/cpld_fpga_data[27]" LOC = AK13;
+NET "Inst_cpld_if/cpld_fpga_data[28]" LOC = AL11;
+NET "Inst_cpld_if/cpld_fpga_data[29]" LOC = AM11;
+NET "Inst_cpld_if/cpld_fpga_data[30]" LOC = AL14;
+NET "Inst_cpld_if/cpld_fpga_data[31]" LOC = AL10;
+
+NET "laser_clk" CLOCK_DEDICATED_ROUTE = FALSE;
