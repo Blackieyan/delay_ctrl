@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-09-17T22:43:32</DateModified>
+  <DateModified>2017-09-18T20:59:40</DateModified>
   <ModuleName>ground_pro_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-09-17T22:54:47</SummaryTimeStamp>
   <SavedFilePath>F:/Projects/liyuhuai/delay_ctrl/iseconfig/ground_pro_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/Projects/liyuhuai/delay_ctrl</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>F:/Projects/liyuhuai/delay_ctrl\</ImplementationReportsDirectory>
   <DateInitialized>2017-09-17T22:43:32</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

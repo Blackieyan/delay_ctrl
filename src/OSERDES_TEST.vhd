@@ -106,6 +106,7 @@ architecture Behavioral of DPS_QKD is
     sys_rst_n          : in  std_logic;
     delay_load_num     : out std_logic_vector(5 downto 0);
     delay_AM1          : out std_logic_vector(13 downto 0);
+    set_trig_cnt : buffer std_logic_vector(7 downto 0);
     cpldif_dps_addr    : in  std_logic_vector(7 downto 0);
     cpldif_dps_wr_en   : in  std_logic;
     cpldif_dps_rd_en   : in  std_logic;
@@ -124,6 +125,7 @@ signal delay_AM1 : std_logic_vector(13 downto 0);
 signal delay_load_num : std_logic_vector(5 downto 0);
 
 signal trig_cnt : std_logic_vector(19 downto 0);
+signal set_trig_cnt : std_logic_vector(7 downto 0);
 begin
 
 
@@ -168,6 +170,7 @@ dps_reg_resolve_1: entity work.dps_reg_resolve
     sys_rst_n          => sys_rst_n,
     delay_load_num     => delay_load_num,
     delay_AM1          => delay_AM1,
+    set_trig_cnt =>set_trig_cnt,
     cpldif_dps_addr    => cpldif_dps_addr,
     cpldif_dps_wr_en   => cpldif_dps_wr_en,
     cpldif_dps_rd_en   => cpldif_dps_rd_en,
@@ -179,7 +182,7 @@ dps_reg_resolve_1: entity work.dps_reg_resolve
   trig_gen_ps: process (laser_clk_out) is
   begin  -- process trig_gen_ps
     if laser_clk_out'event and laser_clk_out = '1' then  -- rising clock edge
-      if(trig_cnt < 100000) then
+      if(trig_cnt < set_trig_cnt) then
         trig_cnt <= trig_cnt + '1';
         trig <= '0';
       else
